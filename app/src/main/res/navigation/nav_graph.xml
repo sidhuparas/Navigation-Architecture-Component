@@ -24,5 +24,14 @@
         android:id="@+id/homeFragment"
         android:name="com.example.navigation_architecture_component.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_boatFragment"
+            app:destination="@id/boatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/boatFragment"
+        android:name="com.example.navigation_architecture_component.BoatFragment"
+        android:label="fragment_boat"
+        tools:layout="@layout/fragment_boat" />
 </navigation>

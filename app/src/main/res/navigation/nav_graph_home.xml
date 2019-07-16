@@ -8,11 +8,15 @@
     <fragment
         android:id="@+id/feedFragment"
         android:name="com.example.navigation_architecture_component.FeedFragment"
-        android:label="fragment_feed"
-        tools:layout="@layout/fragment_feed" />
+        android:label="Feed"
+        tools:layout="@layout/fragment_feed">
+        <action
+            android:id="@+id/action_feedFragment_to_ordersFragment"
+            app:destination="@id/ordersFragment" />
+    </fragment>
     <fragment
         android:id="@+id/ordersFragment"
         android:name="com.example.navigation_architecture_component.OrdersFragment"
-        android:label="fragment_orders"
+        android:label="Orders"
         tools:layout="@layout/fragment_orders" />
 </navigation>

@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import kotlinx.android.synthetic.main.fragment_welcome.*
 
 class WelcomeFragment : Fragment() {
@@ -20,5 +21,9 @@ class WelcomeFragment : Fragment() {
         button_registration.setOnClickListener(
             Navigation.createNavigateOnClickListener(R.id.action_welcomeFragment_to_registrationFragment)
         )
+
+        button_login.setOnClickListener {
+            findNavController().navigate(R.id.action_welcomeFragment_to_homeFragment)
+        }
     }
 }
